@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { FriendsStatus } from "./friendsItem.styled";
-import "./friendsitem.css";
+import s from "./friendsitem.module.css";
 
 const FriendsItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className="item">
+    <li className={s.item}>
       <FriendsStatus isOnline={isOnline}>
         <img className="avatar" src={avatar} alt="User avatar" width="48" />
         <p className="name">{name}</p>

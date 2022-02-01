@@ -1,11 +1,11 @@
 import transactions from "../../../data/transactions.json";
 import TransactionsItem from "../transactionsItem/TransactionsItem";
 
-import "./TransactionsList.css";
+import s from "./TransactionsList.module.css";
 
 const TransactionsList = () => {
   return (
-    <table className="transaction-history">
+    <table className={s.transactionHistory}>
       <thead>
         <tr>
           <th>Type</th>
