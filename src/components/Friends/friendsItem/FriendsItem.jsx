@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
-
+import { FriendsStatus } from "./friendsItem.styled";
 import "./friendsitem.css";
 
 const FriendsItem = ({ avatar, name, isOnline }) => {
   return (
     <li className="item">
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <FriendsStatus isOnline={isOnline}>
+        <img className="avatar" src={avatar} alt="User avatar" width="48" />
+        <p className="name">{name}</p>
+      </FriendsStatus>
     </li>
   );
 };
@@ -19,3 +20,4 @@ FriendsItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
+// className="status"
